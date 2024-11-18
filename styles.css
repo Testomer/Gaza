@@ -1,0 +1,137 @@
+/* إعدادات عامة */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+/* العنوان الرئيسي */
+header h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    animation: glow 2s infinite;
+}
+
+/* تنويه هام */
+.notice {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #f00;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: slide-in 2s ease-in-out;
+}
+
+.notice h2 {
+    color: #f00;
+}
+
+/* التواصل */
+.contact {
+    margin: 20px 0;
+}
+
+.contact .whatsapp, .contact .schedule {
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #00ff00;
+    background-color: rgba(0, 255, 0, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    animation: fade-in 2s ease-in-out;
+}
+
+.contact button {
+    display: inline-block;
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+/* نافذة الجدول */
+.modal {
+    display: none; /* مخفية افتراضيًا */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: darkred;
+}
+
+/* الحركات */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    50% {
+        text-shadow: 0 0 20px #ff7700, 0 0 40px #ff7700, 0 0 50px #ff7700;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

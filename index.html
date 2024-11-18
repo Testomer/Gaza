@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة غزة العليا الأساسية 24 الخارج</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* تنسيقات خاصة بالعنوان Artwork */
+        .artwork {
+            font-size: 1.5em;
+            color: #0066cc;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* تنسيقات خاصة بالزر */
+        .schedule-button {
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .schedule-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            background-color: #218838;
+        }
+
+        /* نافذة الجدول */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .close-button {
+            font-size: 1.5em;
+            color: #333;
+            background: none;
+            border: none;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مدرسة غزة العليا الأساسية 24 الخارج</h1>
+    </header>
+
+    <section class="notice">
+        <h2>⚠️ تنويه هام ⚠️</h2>
+        <p>
+            الأهالي الكرام... التواصل خاص بمدرسة غزة الأساسية العليا خارج ٢٤. 
+            (خاصة بالطلبة النظاميين الذين لم ينقطعوا العام الماضي عن التعليم وهم في خارج غزة ) ولن يتم التجاوب بدون إرسال صورة من الايسكول تبين إسم المدرسة وإسم الطالب الرباعي وصفه وشعبته. نعتذر بسبب الضغط الشديد.
+        </p>
+        <p>
+            ويكون تواصل طلبة المدرسة مع مربي الصفوف حيث سيتم معالجة المشاكل من خلالهم. ونود التنويه إلى أن عمليات النقل تكون من قبل المدرسة التي يوجد بها الطالب حالياً. شاكرين تفهمكم لذلك.
+        </p>
+        <p>رقم الدعم الفني في الوزارة: <strong>+972 56-250-3686</strong> (من ٨-٢ فقط).</p>
+    </section>
+
+    <!-- Artwork Credit -->
+    <div class="artwork">Artwork: Omer Abo Aker</div>
+
+    <section class="contact">
+        <div class="whatsapp">
+            <img src="whatsapp-logo.png" alt="WhatsApp Logo">
+            <a href="https://wa.me/+972562501919" target="_blank">اضغط هنا للتواصل مع المديرة</a>
+        </div>
+        <div class="schedule">
+            <button class="schedule-button" onclick="showSchedule()">اضغط هنا لتحميل جدولك المدرسي</button>
+        </div>
+    </section>
+
+    <!-- نافذة عرض الجدول -->
+    <div id="scheduleModal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="hideSchedule()">×</button>
+            <iframe src="الجدول المدرسي.pdf" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>
